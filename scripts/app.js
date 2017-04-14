@@ -1,16 +1,22 @@
 $(document).ready(function() {
-    $.ajax({
-        type: 'GET',
-        url: 'http://api.steampowered.com/ISteamApps/GetAppList/v0001/?format=json',
-        contentType: 'text/plain',
-        xhrFields: {
-            withCredentials: false
-        },
-        success: function() {
-            console.log('Success');
-        },
-        error: function() {
-            console.log('Error');
-        }
+
+    for (var i = 0; i < 15; i++) {
+        $('.box').append(`<canvas class="drag" id="${i}"><canvas>`);
+    };
+
+    $('.drag').draggable({
+        grid: [50, 20]
     });
+
+    var blocks = $('.drag');
+    for (canvas in blocks) {
+        console.log(blocks[canvas]);
+    }
+
+    var r = Math.floor(Math.random() * 255),
+        g = Math.floor(Math.random() * 255),
+        b = Math.floor(Math.random() * 255),
+        a = Math.random();
+
+    // console.log(r, g, b, a);
 });
