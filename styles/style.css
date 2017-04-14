@@ -3,8 +3,14 @@ body {
 }
 .box {
   background-color: white;
-  height: 75vh;
-  width: 75vw;
-  display: block;
-  margin: 5vh auto;
+  height: 80vh;
+}
+.drag {
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+}
+h1 {
+  text-align: center;
+  color: lightcyan;
 }
